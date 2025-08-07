@@ -1,10 +1,25 @@
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --link-color: grey;
+    --bg-image: none;
+    --nav-bg-color: #222;
+    --nav-text-color: white;
+    --nav-link-color: grey;
+    --nav-bg-image: none;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
-    background-color: #f5f5f5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-image: var(--bg-image);
+    background-size: cover;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.intro {
+.main {
     margin: 2em;
 }
 
@@ -12,8 +27,11 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #222;
-    color: white;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    background-image: var(--nav-bg-image);
+    background-size: cover;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar a {
@@ -23,7 +41,16 @@ body {
 }
 
 .navbar a:hover {
-    color: grey;
+    color: var(--nav-link-color);
+}
+
+.theme-toggle button {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    margin: -5px -5px;
 }
 
 
